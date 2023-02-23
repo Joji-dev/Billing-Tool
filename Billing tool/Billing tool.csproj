@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+	  <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Billing_tool</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CRONOS-Care-01 %28lowres%29.png" />
+    <None Remove="home.png" />
+    <None Remove="icon.png" />
+    <None Remove="index.png" />
+    <None Remove="Invoice-Icon.png" />
+    <None Remove="settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>8</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>2df8d04c-5bfa-101b-bde5-00aa0044de52</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.4.0" />
+    <PackageReference Include="LiteDB" Version="5.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="CRONOS-Care-01 (lowres).png" />
+    <Resource Include="home.png" />
+    <Resource Include="icon.png" />
+    <Resource Include="index.png" />
+    <Resource Include="Invoice-Icon.png" />
+    <Resource Include="settings.png" />
+  </ItemGroup>
+
+</Project>
